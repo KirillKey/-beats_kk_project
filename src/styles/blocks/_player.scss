@@ -1,0 +1,197 @@
+.section-player {
+  background-color: #F8FAF9;
+
+  & .section__title {
+    margin-bottom: rem(44px);
+    
+    @include tablets {
+      margin-bottom: rem(44px);
+    }
+    @include phones {
+      margin-bottom: rem(48px);
+    }
+  }
+}
+
+.player__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player {
+  position: relative;
+
+  &.paused {
+    .player__start {
+      background: url("https://img.icons8.com/ios-glyphs/30/FFFFFF/pause--v1.png") center center / cover no-repeat;
+      width: rem(16px);
+      height: rem(20px);
+      margin-right: rem(26px);
+
+      @include tablets {
+        width: rem(18px);
+        height: rem(22px);
+        margin-right: rem(28px);
+      }
+    }
+  }
+
+  & iframe#yt-player {
+    width: rem(662px);
+    height: rem(392px);
+
+    @include tablets {
+        width: rem(632px);
+        height: rem(374px);
+    }
+    @include phones {
+        width: rem(450px);
+        height: rem(262px);
+    }
+  }
+
+  .player__splash {
+    display: block;
+    background: url("./images/player-sect/preview.png") center bottom / cover no-repeat;
+    width: 100%;
+    height: 100%;
+    // pointer-events: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    &::before {
+      content: '';
+      display: block;
+      background: url('./images/player-sect/play.svg') center center / cover no-repeat;
+      width: rem(50px);
+      height: rem(72px);
+      position: absolute;
+      left: 46%;
+      top: 38%;
+      @include tablets {
+          width: rem(84px);
+          height: rem(118px);
+          left: 44%;
+          top: 28%;
+      }
+      @include phones {
+          width: rem(58px);
+          height: rem(84px);
+          left: 44%;
+          top: 30%;
+      }
+    }
+  }
+  &.active {
+    .player__splash {
+      display: none;
+    }
+  }
+  
+}
+
+.player__wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.player__elem {
+  // position: absolute;
+  // left: 0;
+  // bottom: 0;
+  // pointer-events: none;
+}
+
+.player__controls {
+  background-color: #151515;
+  width: 100%;
+  height: rem(35px);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 rem(19px);
+}
+
+.player__start {
+  background: url('./images/player-sect/play.svg') center center / cover no-repeat;
+  width: rem(11px);
+  height: rem(16px);
+  margin-right: rem(30px);
+  @include tablets {
+    width: rem(16px);
+    height: rem(22px);
+}
+}
+
+.player__playback {
+    background: linear-gradient(90deg, $red 0%, #333 0%);
+    width: rem(442px);
+    height: rem(4px);
+    position: relative;
+    margin-right: rem(43px);
+    cursor: pointer;
+    // background: url('./images/player-sect/line.svg') center center / cover no-repeat;
+
+
+    &-button {
+      background-color: $red;
+      width: rem(15px);
+      height: rem(15px);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      transform: translate(0%, 36%);
+  
+      left: 0;
+    }
+}
+
+.player__vol {
+  display: flex;
+  align-items: center;
+
+  &-icon{
+    background: url('./images/player-sect/volume.svg') center center / cover no-repeat;
+    width: rem(13px);
+    height: rem(16px);
+    margin-right: rem(25px);
+  }
+
+  &-slider {
+    background: linear-gradient(90deg, $red 12%, #333 0%);
+    border-radius: rem(2px);
+    width: rem(62px);
+    height: rem(5px);
+    position: relative;
+    cursor: pointer;
+    // background: url('./images/player-sect/line.svg') center center / cover no-repeat;
+  }
+
+  &-button {
+    background-color: $red;
+    width: rem(12px);
+    height: rem(12px);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    transform: translate(0%, 28%);
+    
+    left: 10%;
+
+    @include phones {
+      width: rem(14px);
+      height: rem(14px);
+    }
+
+    // &::before {
+    //   content: '';
+    //   display: block;
+    //   background: url('./images/player-sect/line-red.svg') center center / cover no-repeat;
+    //   width: rem(62px);
+    //   height: rem(5px);
+    // }
+  }  
+}

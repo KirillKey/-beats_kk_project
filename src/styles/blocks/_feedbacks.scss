@@ -1,0 +1,139 @@
+.feedbacks__display {
+  background-color: #F8FAF9;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 5.19rem;
+    height: 5.19rem;
+    border-radius: 50%;
+
+    background-color: #fff;
+    position: absolute;
+    top: -3.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+   margin-bottom: rem(15px);
+
+  @include tablets {
+    margin-bottom: rem(32px);
+  }
+  @include phones {
+    margin-bottom: rem(46px);
+  }
+}
+
+.feedbacks__list {
+ position: relative;
+ min-height: rem(350px);
+ @include tablets {
+   min-height: rem(418px);
+ }
+ @include tablets {
+   min-height: rem(520px);
+ }
+}
+
+.feedbacks__item {
+  display: flex;
+  align-items: center;
+  padding: rem(42px);
+  padding-right: rem(106px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.3s;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: rem(42px);
+  }
+  &.active{
+    opacity: 1;
+  }
+}
+
+.feedbacks__avatar {
+  width: rem(254px);
+  height: rem(264px);
+  margin-right: rem(38px);
+
+  @include tablets {
+    width: rem(136px);
+    height: rem(136px);
+    margin-right: 0px;
+    margin-bottom: rem(38px);
+  }
+
+  @include phones {    
+   width: rem(136px+12px);
+   height: rem(136px+12px);
+   margin-bottom: rem(21px+4px);   
+  }
+}
+
+.feedbacks__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feedbacks__content {
+  flex: 1;
+}
+
+.feedbacks__title {
+  color: $black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.69rem;
+
+  @include tablets {
+   margin-bottom: rem(16px);
+  }
+
+}
+
+.feedbacks__text {
+  margin-bottom: rem(44px);
+  
+  @include tablets {
+    font-size: rem(16px+2px);
+    margin-bottom: rem(20px);
+  }
+  @include phones {
+   font-size: rem(16px+2px);
+  }
+}
+
+.feedbacks__author {
+  color: $black;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.feedbacks-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@include tablets {
+  .section__feedbacks .section__title {
+    margin-bottom: 3rem;
+  }
+}
+@include phones {
+  .section__feedbacks .section__title {
+    margin-bottom: 2rem;
+  }
+}

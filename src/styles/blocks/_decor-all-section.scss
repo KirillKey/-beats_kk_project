@@ -1,0 +1,81 @@
+.section {
+  position: relative;
+
+  &__benefits--decor::after {
+    content: "";
+    display: block;
+    width: 2.87rem;
+    height: 0.62rem;
+    background-color: #C4C4C4;
+    transform: rotate(135deg);
+    position: absolute;
+    right: 12%;
+    top: 0;
+
+    @include tablets {
+      right: 8%;
+      }
+    }
+
+  &__product--decor::after {
+      content: "";
+      border: 2rem solid transparent;
+      width: 0rem;
+      height: 0rem;
+      border-right-color: #E01F3D;
+      border-left-width: 0rem;
+      transform: rotate(-45deg);
+      border-top-width: 1.25rem;
+      border-bottom-width: 1.25rem;
+      position: absolute;
+      top: -2%;
+      left: 5%;
+
+      @include tablets {
+        left: 6%;
+      }
+    }
+    
+
+  &-team--decor::after {
+      content: url('./images/decor-page/team-top.svg');
+      display: block;
+      width: rem(34px);
+      height: rem(34px);
+      transform: rotate(90deg);
+      position: absolute;
+      right: 6%;
+      top: -3%;
+  
+      @include tablets {
+        right: 8%;
+        }
+      }
+    
+  &-player--decor::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: rem(35px);
+    height: rem(35px);
+    background-color: #868686;
+    border-radius: 50%;
+    top: -2%;
+    left: 7%;
+
+    @include tablets {
+      left: 8%;
+    }
+  }
+
+  &-order--decor::before {
+    content: url('./images/decor-page/order-top.svg');
+    display: block;
+    width: rem(35px);
+    height: rem(35px);
+    transform: rotate(70deg);
+    position: absolute;
+    right: 8%;
+    top: -4%;
+  }
+}

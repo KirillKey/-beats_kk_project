@@ -1,0 +1,150 @@
+.section__benefits {
+  @include tablets {
+    // padding: rem(290px) 0;
+  }
+  @include phones {
+    // padding: rem(38px) 0;
+  }
+}
+.benefits__container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.benefits__top-title {
+  margin-bottom: rem(18px);
+  color: $black;
+}
+
+.benefits__top-subtitle {
+  font-size: rem(16px);
+  text-align: center;
+  margin-bottom: 3.875rem;
+  padding: 0 20%;
+  @include tablets {
+   padding: 0 18%;   
+  }
+  @include phones {
+   font-size: rem(16px+2px);
+   padding: 0 4%;   
+   margin-bottom: rem(54px);
+  }
+}
+
+.benefits {
+  display: flex;
+  align-items: flex-start;
+
+  @include phones {
+   align-items: normal;
+   flex-direction: column;
+  }
+}
+
+.benefit__item {
+  flex: 1;
+  padding: 0 3%;
+  position: relative;
+  @include tablets {
+   padding: 0 0;
+  }
+  @include phones {
+   padding: 0 0;
+   margin-bottom: rem(40px);
+  }
+
+  &::before {
+    content: url("./images/benefit/circle-separation.png");
+    position: absolute;
+    top: 3.625rem;
+    right: 0;
+    transform: translateX(45%);
+
+    @include tablets {
+      display: none;
+    }
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @include phones {
+   flex-direction: row;
+   text-align: left;
+   align-items: center;
+  }
+}
+
+.benefit__img {
+  margin-bottom: 1.25rem;
+  @include phones {
+   margin-bottom: 0px;
+   margin-right: rem(12px);
+  }
+}
+
+.benefit__img-wrap {
+  display: inline-flex;
+  width: rem(128px);
+  height: rem(128px);
+  background-color: #F2F5F4;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+
+  @include phones {
+    width: rem(128px+16px);
+    height: rem(128px+16px);
+  }
+}
+
+.benefit__icon {
+  width: rem(60px);
+  height: rem(60px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.benefit__text {
+  flex: 1;
+}
+
+.benefit__title {
+  font-size: rem(24px);
+  font-weight: 700;
+  color: $black;
+  margin-bottom: 0.5rem;
+  @include tablets {
+    margin-bottom: rem(20px);
+  }
+  @include phones {
+    font-size: rem(24px+3px);
+    margin-bottom: rem(6px);
+  }
+
+}
+
+.benefit__desc {
+  padding: 0 6%;
+  @include phones {
+   padding: 0 0;   
+  }
+}

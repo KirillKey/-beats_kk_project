@@ -1,0 +1,92 @@
+.prime {
+  background-color: $grey;
+  // height: 100vh;
+  height: 100%;
+  min-height: rem(652px);
+  position: relative;
+  padding: rem(24px) 0rem rem(160px);
+
+  @include tablets {
+    // height: auto;
+    // min-height: 100vh;
+  }
+}
+
+.prime__container {
+  height: 100%;
+  background: url("./images/prime-sect/headphones-back.png") right 4% center / 50% auto no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // padding: rem(24px) 0rem rem(160px);
+
+  @include tablets {
+    background: none;
+  }
+}
+
+.prime__title-section {
+  width: 42%;
+  display: flex;
+  flex-direction: column;
+
+  @include tablets {
+    width: 100%;
+    flex: 1;
+    align-items: center; 
+    text-align: center;
+
+    &::before {
+      background-image: url(./images/prime-sect/headphones-back.png);
+      content: "";
+      background-size: rem(340px) rem(340px);
+      width: rem(340px);
+      height: rem(340px);
+      margin-bottom: rem(72px);
+
+      @include phones {
+        margin-bottom: rem(48px);
+      }
+    }
+    
+  }
+
+}
+
+.prime__main-title {
+  color: $black;
+  font-size: rem(48px);
+  line-height: rem(52px);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.37rem;
+
+  @include tablets {
+    font-size: rem(48px);
+    padding: 0px 8%;
+    margin-bottom: rem(12px);
+  }
+
+  @include phones {
+    font-size: rem(32px+4px);
+    line-height: rem(36px+4px);
+    padding: 0 12%;
+    margin-bottom: rem(14px);
+  }
+}
+
+.prime__main-subtitle {
+  font-family: $font-add;
+  font-size: rem(21px);
+  margin-bottom: 2.25rem;
+  padding-right: 14%;
+
+  @include tablets {
+    padding: 0px 26%;
+    margin-bottom: rem(24px);
+  }
+  @include phones {
+   font-size: rem(18px+5px);
+   padding: 0 14%;   
+  }
+}

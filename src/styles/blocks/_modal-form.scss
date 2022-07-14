@@ -1,0 +1,35 @@
+#modal {
+  display: none;
+  color: #000;
+  &.error-modal {
+    color: red;
+  }
+}
+
+
+.modal__container {
+  width: rem(312px);
+  height: rem(176px);
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.modal__content {
+  margin-bottom: rem(18px);
+  font-size: rem(18px);
+}
+
+.modal__submit--btn {
+  .app-close-modal {
+    display: block;
+    padding: rem(21px) rem(48px);
+  }
+}
+
+.input-error {
+  border-color: red;
+}

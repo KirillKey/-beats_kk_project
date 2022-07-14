@@ -1,0 +1,128 @@
+.section-colors {
+  flex-direction: row;
+
+  @include tablets {
+    // padding: 0 0;
+  }
+
+  & .section__title {
+  color: $white;
+  margin-top: rem(116px);
+  margin-left: rem(68px);
+  margin-right: rem(570px);
+
+  @include tablets {
+    margin-left: rem(42px);
+    margin-right: rem(44px);
+  }
+  @include phones {
+    margin-left: rem(12px);
+    margin-right: rem(44px);
+  }
+  }
+}
+
+.colors {
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+  background: url('./images/colors-sect/back-colors.png') right -18% center / cover no-repeat;
+  height: 100%;
+  width: 100vw;
+  position: relative;
+  
+  @include phones {
+    background-position: right 20% center;
+  }
+}
+
+.color__list {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  @include tablets {
+    margin-left: auto;
+    margin-right: 0px;
+  }
+}
+
+.color__item {
+  display: flex;
+  height: 100%;
+
+  // @include tablets {
+  //   position: absolute;
+  //   &--grey{
+  //     right: 178px;
+  //   }
+  //   &--black{
+  //     right: 89px;
+  //   }
+  //   &--red{
+  //     right: 0;
+  //   }
+  // }
+
+  @include phones {
+    // position: absolute;
+    &--grey{
+      right: 178px;
+    }
+    &--black{
+      right: 89px;
+    }
+    &--red{
+      right: 0;
+    }
+  }
+}
+
+.color__title {
+  display: block;
+  width: rem(102px);
+  font-size: rem(36px);
+  font-weight: 700;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding: rem(30px) rem(30px) rem(0px);
+
+  // @include phones {
+  //   width: rem(92px);
+  // }
+
+  &--grey {
+    background-color: #999;
+  }
+  &--black {
+    background-color: #151515;
+  }
+  &--red {
+    background-color: #E01F3C;
+  }
+
+}
+
+.color__desc {
+  width: 0vw;
+  overflow: hidden;
+  transition: width 0.5s;
+  background: rgba(51, 53, 55, 0.9);
+}
+
+.color__content {
+  width: 48vw;
+  @include tablets {
+    width: 62vw;
+  }
+  @include phones {
+    width: 81vw;
+  }
+  transition: width 0.5s;
+}
+.color__item.active-color {
+  & .color__content {
+    padding: rem(32px) rem(52px) rem(0px) rem(38px);
+  }
+}

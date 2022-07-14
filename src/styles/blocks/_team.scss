@@ -1,0 +1,135 @@
+.section-team .section__title {
+  margin-bottom: rem(52px);
+  
+  @include tablets {
+    margin-bottom: rem(38px);
+  }
+  @include phones {
+    margin-bottom: rem(40px);
+  }
+}
+
+.team {
+  
+  &--v-desktop {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    @include tablets {
+    display: none;
+  }
+  .team__desc {
+    position: absolute;
+    top: 100%;
+    }
+  }
+
+}
+
+
+.team__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: rem(20px);
+
+  &:last-child {
+  margin-right: rem(0px);
+  }
+
+  @include tablets {
+    margin-right: 0;
+    margin-bottom: rem(14px);
+  }
+}
+
+.team__avatar {
+  margin-bottom: rem(25px);
+  &-img {
+    width: rem(220px);
+    height: rem(290px);
+    max-height: none;
+    object-fit: cover;
+    @include tablets {
+      width: rem(220px + 20px);
+      height: rem(290px + 20px);
+    }
+    @include tablets {
+      width: rem(160px);
+      height: rem(200px);
+    }
+  }
+  
+  @include tablets {
+    max-height: none;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+  }
+}
+
+.team__name {
+  font-size: rem(18px);
+  font-weight: 700;
+  color: $black;
+  margin-bottom: rem(10px);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+
+  @include tablets {
+    margin-bottom: rem(16px);
+  }
+}
+
+.team__name-decor {
+  display: inline-block;
+  width: rem(9px);
+  height: rem(9px);
+  margin-left: 4px;
+  transform: rotate(60deg);
+}
+
+.team__desc {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
+.team__post {
+  color: $black;
+  margin-bottom: rem(5px);
+  @include tablets {
+    color: #000;
+    font-weight: bold;
+  }
+}
+
+.team__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;  
+  padding: 0 20%;
+  @include tablets {
+    padding: 0 24%;
+  }
+}
+
+
+
+.team--v-mobile {
+  display: none;
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.team__wrap-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,17 @@
+.section-order {
+  background-color: #181818;
+  background: url("./images/order-sect/back-order.png") center bottom / cover no-repeat;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-order .section__title {
+  color: $white;
+  margin-bottom: 3.62rem;
+
+  @include tablets {
+    padding: 0 2%;
+  }
+}

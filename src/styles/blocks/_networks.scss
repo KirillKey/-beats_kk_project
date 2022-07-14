@@ -1,0 +1,73 @@
+.networks {
+  display: flex;
+  align-items: center;
+}
+
+.network__item {
+  margin-right: 0.62rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.network__icon {
+  display: flex;
+  width: rem(30px);
+  height: rem(30px);
+  color: #B3B3B3;
+
+  &--vk:hover {
+    color: #000;
+  }
+  &--fb:hover {
+    color: #000;
+  }
+  &--inst:hover {
+    color: #000;
+  }
+  &--tg:hover {
+    color: #000;
+  }
+}
+
+
+
+
+// .network__icon {
+//   display: block;
+//   width: 1.875rem;
+//   height: 1.875rem;
+//   background-color: none;
+//   border-radius: 50%;
+//   position: relative;
+
+//     &--vk::after {
+//       display: block;
+//       content: "";
+//       width: 1.875rem;
+//       height: 1.875rem;
+//       background: url('./images/networks/icons-sprites.png') -160px -10px;
+//       }
+//     &--fb::after {
+//       display: block;
+//       content: "";
+//       width: 1.875rem;
+//       height: 1.875rem;
+//       background: url('./images/networks/icons-sprites.png')  -10px -10px;
+//       }
+//     &--inst::after {
+//       display: block;
+//       content: "";
+//       width: 1.875rem;
+//       height: 1.875rem;
+//       background: url('./images/networks/icons-sprites.png') -60px -10px;
+//       }
+//     &--tg::after {
+//       display: block;
+//       content: "";
+//       width: 1.875rem;
+//       height: 1.875rem;
+//       background: url('./images/networks/icons-sprites.png') -110px -10px;
+//       }
+// }
