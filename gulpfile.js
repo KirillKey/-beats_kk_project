@@ -15,9 +15,6 @@ const uglify = require('gulp-uglify');
 const svgo = require('gulp-svgo');
 const svgSprite = require('gulp-svg-sprite');
 const gulpif = require('gulp-if');
-// const $ = require( "jquery" );
-
-
 
 const env = process.env.NODE_ENV;
 
