@@ -18,10 +18,10 @@ const gulpif = require('gulp-if');
 
 const env = process.env.NODE_ENV;
 
-const {SRC_PATH, DIST_PATH, STYLE_LIBS, JS_LIBS} = require('./gulp.config');
+const {SRC_PATH, DOCS_PATH, STYLE_LIBS, JS_LIBS} = require('./gulp.config');
 
 task('clean', () => {
-return src(`${DIST_PATH}/**/*`, { read: false })
+return src(`${DOCS_PATH}/**/*`, { read: false })
    .pipe(rm())
 });
 
@@ -32,14 +32,14 @@ return src("./dist/**/*", { read: false })
 
 task('copy:html', () => {
 return src(`${SRC_PATH}/*.html`)
-   .pipe(dest(DIST_PATH))
+   .pipe(dest(DOCS_PATH))
    .pipe(dest("./dist"))
    .pipe(reload({ stream: true }))
 });
 
 task('copy:img', () => {
   return src(`${SRC_PATH}/images/**/*`)
-    .pipe(dest(`${DIST_PATH}/images`))
+    .pipe(dest(`${DOCS_PATH}/images`))
     .pipe(dest("./dist/images"))
     .pipe(reload({ stream: true }));
 })
@@ -62,7 +62,7 @@ return src(`${SRC_PATH}/images/**/*.svg`)
        }
      }
    }))
-   .pipe(dest(`${DIST_PATH}/images/icons`))
+   .pipe(dest(`${DOCS_PATH}/images/icons`))
    .pipe(dest("./dist/images/icons"));
 });
 
@@ -82,7 +82,7 @@ return src([...STYLE_LIBS, './src/styles/main.scss'])
    .pipe(gulpif(env == 'prod', groupcmq()))
    .pipe(gulpif(env == 'prod', cleanCSS()))
    .pipe(gulpif(env == 'dev', sourcemaps.write()))
-   .pipe(dest(DIST_PATH))
+   .pipe(dest(DOCS_PATH))
    .pipe(dest("./dist"))
    .pipe(reload({ stream: true }));
 });
@@ -96,7 +96,7 @@ return src([...JS_LIBS, './src/scripts/*.js'])
    })))
    .pipe(gulpif(env == 'prod', uglify()))
    .pipe(gulpif(env == 'dev', sourcemaps.write()))
-   .pipe(dest(DIST_PATH))
+   .pipe(dest(DOCS_PATH))
    .pipe(dest("./dist"))
    .pipe(reload({ stream: true }));
 });
