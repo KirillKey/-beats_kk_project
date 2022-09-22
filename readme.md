@@ -1,3 +1,10 @@
+# Beats - сайт наушников.
+## Описание: ожидается (description: soon)
+
+#### 📑 [Мой сертификат Веб-разработчика](https://loftschool.com/diploma/NPR54032AC542XBZ4/ru/pdf)
+###### (Онлайн-школа [Loftschool](https://loftschool.com)) 
+___
+
 Hello!
 My name is Kirill Kuklin. I am a student of the "LoftSchool" online school.
 
