@@ -7,7 +7,7 @@
 - Css (Sass)
 - Javascript (Jquery)
 - API Яндекс-карт
-- Vannila:
+- Vanilla:
   + HTML
 - Адаптивная верстка 
 
